@@ -1,2 +1,6 @@
-var audio = new Audio("YourBirthdaySong.mp3");
-audio.play();
+document.addEventListener("DOMContentLoaded", function () {
+  var audio = document.getElementById("myAudio");
+  audio.play().catch(function (error) {
+    console.log("Failed to play audio:", error);
+  });
+});
