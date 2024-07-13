@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var audio = document.getElementById("myAudio");
   var playButton = document.getElementById("start");
+  var countdown = document.getElementById("countdown");
 
   // Check if the audio can play automatically
   audio.play().catch(function (error) {
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(function () {
         // Hide the play button if the audio plays successfully
         playButton.style.display = "none";
+        countdown.style.display = "block";
       })
       .catch(function (error) {
         console.log("Failed to play audio:", error);
